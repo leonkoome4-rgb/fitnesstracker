@@ -120,7 +120,15 @@ def cmd_athlete_report(args, store):
 
 
 def build_parser():
-    p = argparse.ArgumentParser(description="Athlete Performance CLI")
+    epilog = '''Examples:
+  python main.py add-athlete --name "Leon" --age 22 --position "Wing" --team "Academy"
+  python main.py list-athletes
+  python main.py add-result --name "Leon" --test "40m Sprint" --score 5.2 --date 2026-06-09
+  python main.py compare --name "Leon" --test "40m Sprint"
+  python main.py rankings --test "100m Sprint"
+  python main.py athlete-report --name "Leon"
+'''
+    p = argparse.ArgumentParser(description="Athlete Performance CLI", epilog=epilog, formatter_class=argparse.RawTextHelpFormatter)
     sub = p.add_subparsers(dest="cmd")
 
     a = sub.add_parser("add-athlete", help="Add an athlete")
