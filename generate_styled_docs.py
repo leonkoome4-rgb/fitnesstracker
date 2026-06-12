@@ -98,7 +98,7 @@ add_table([
 # -----------------------------
 section("4. Add Athlete Command")
 text_block("""
-python main.py add-athlete --name "John Doe" --age 21 --position "Runner" --team "Alpha"
+python main.py add-athlete --name "albet biron " --age 21 --position "Runner" --team "Alpha"
 
 Rules:
 - Name must be unique
